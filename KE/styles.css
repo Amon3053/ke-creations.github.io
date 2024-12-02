@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0') no-repeat center center fixed; /* Dark colorful forest image */
+    background-size: cover;
+    z-index: -1;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 
+        8px 8px 15px rgba(174, 174, 192, 0.25),
+        -8px -8px 15px rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.neumorphic-title {
+    font-size: 2em;
+    color: #333;
+}
+
+.neumorphic-message {
+    font-size: 0.8em;
+    color: #666;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.firefly {
+    position: absolute;
+    border-radius: 50%;
+    background-color: yellow;
+    opacity: 0.8;
+    pointer-events: none; /* Prevent mouse events on fireflies */
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0.2;
+    }
+}
